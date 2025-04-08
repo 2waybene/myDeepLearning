@@ -1,0 +1,10 @@
+Step 1: conda create -n myDeepLearning python=3.9
+Step 2: accept all the NEW packages
+Step 3: It prompts that "my conda is out of date", need to upgrate conda by doing
+  Step 3.1: conda install conda=25.3.1
+Step 4: conda activate myDeepLearning
+  Step 4.1: pip install --upgrade pip 
+Step 5: pip install jupyter 
+Step 5: pip install tensorflow
+Step 6: conda deactivate
+
