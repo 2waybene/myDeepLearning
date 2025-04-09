@@ -1,3 +1,6 @@
+##	This installation is unsuccessful, therefore, I am copying one existing virtual environment
+##	scanpyBasic
+##====================================================================================================
 Step 1: conda create -n myDeepLearning python=3.9
 Step 2: accept all the NEW packages
 Step 3: It prompts that "my conda is out of date", need to upgrate conda by doing
@@ -7,4 +10,40 @@ Step 4: conda activate myDeepLearning
 Step 5: pip install jupyter 
 Step 5: pip install tensorflow
 Step 6: conda deactivate
+
+##====================================================================================================
+##      I am deleting it and copying one existing virtual environment scanpyBasic
+##====================================================================================================
+
+conda env remove --name myDeepLearning
+
+Step 1: conda activate scanpyBasic
+Step 2: pip freeze > requirements.txt
+Step 3: conda activate scanpyBasic
+Step 4: pip freeze > requiresment.txt
+Step 5: conda deactivate
+Step 6: conda activate myDeepLearning
+Step 7  pip install -r requirements.txt
+
+
+
+
+##====================================================================================================
+##      I have the following error of version conflict about datajoint and network
+##	It is not my prority, so I am ignoring it now
+##	But, some packages I do need to install "manually" for the anlaysis
+##====================================================================================================
+
+ERROR: Cannot install datajoint==0.14.1 and networkx==3.2.1 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested networkx==3.2.1
+    datajoint 0.14.1 depends on networkx<=2.6.3
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip to attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
 
